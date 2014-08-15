@@ -17,6 +17,8 @@ fn main() {
 	use_loop();
 
 	use_for_in();
+
+	use_struct();
 }
 
 // define function:
@@ -79,4 +81,16 @@ fn use_for_in() {
 	for chr in str.chars() {
 		println!("{}", chr);
 	}
+}
+
+//Define struct type:
+struct Location {
+	longitude: f64,
+	latitude: f64
+}
+
+fn use_struct() {
+	let mut myLocation = Location { longitude: 121.3581038898, latitude: 31.2198830738 };
+	myLocation.latitude += 1.0;
+	println!("My location: {}, {}", myLocation.longitude, myLocation.latitude );
 }
