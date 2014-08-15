@@ -19,6 +19,8 @@ fn main() {
 	use_for_in();
 
 	use_struct();
+
+	//use_enum();
 }
 
 // define function:
@@ -94,3 +96,33 @@ fn use_struct() {
 	myLocation.latitude += 1.0;
 	println!("My location: {}, {}", myLocation.longitude, myLocation.latitude );
 }
+
+//Define Enum type:
+//Note: This feature of the compiler is currently gated behind the #[feature(struct_variant)] directive.
+/*
+enum Shape {
+	Circle { center: Point, radius: f64 },
+	Retangle { top_left: Point, bottom_right: Point }
+}
+
+struct Point {
+	x: f64,
+	y: f64
+}
+
+fn area(shape: Shape) -> f64 {
+	match shape {
+		Circle { radius: radius, .. } => f64::consts::PI * square(radius),
+		Retangle { top_left: top_left, bottom_right: bottom_right } => {
+			(bottom_right.x - top_left.x) * (top_left.y - bottom_right.y)
+		}
+	}
+}
+
+fn use_enum() {
+	let c = Point { x: 0, y: 0};
+	let r = 12345.67890;
+	let circie = Circle { center: c, radius: r};
+	println!("Circle's area: {}", area(circle));
+}
+*/
