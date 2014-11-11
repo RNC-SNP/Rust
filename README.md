@@ -1,4 +1,4 @@
-Rust-Demo
+Rust-Snippets
 ==========
 
-Demos of Rust.
+Code Snippets of Rust.
